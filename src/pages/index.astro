@@ -42,14 +42,14 @@ const metadata = {
     image={{ src: './images/socrates.jpg', alt: 'Death of Socrates' }}
   >
     <Fragment slot="title">
-      <span class=text-7xl> Welcome to </span> <span class="text-accent dark:text-white highlight font-extrabold text-7xl"> Dialexicon</span>
+      <span class=text-7xl> Welcome to </span> <span class="text-blue-700 dark:text-white highlight font-extrabold text-7xl"> Dialexicon</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline leading-relaxed">
-        <span> A platform for youth to engage in philosophy. </span>     
-        <br/>    
-        <span> Dialexicon = dialectic (Hegel/Plato: 'philosophical discourse') + lexicon ('language') </span>
+      <span class="hidden md:inline leading-relaxed">
+        <span class="font-semibold"> A platform for youth to engage in philosophy. </span>     
+        <br/>   
+        <span class="text-purple-700 text-sm"> Dialexicon = <span class="text-red-600"> dialectic (Hegel/Plato: 'philosophical discourse') </span> + <span class="text-blue-600"> lexicon ('vocabulary')</span></span>
     </Fragment>
   </Hero>
 
@@ -64,33 +64,38 @@ const metadata = {
       {
         title: 'Journal',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'An annual journal for high-school students to publish their philosophical essays. We publish all kinds of essays, from metaphysics to contemporary ethics.',
         icon: 'tabler:brand-tailwind',
       },
       {
         title: 'Podcast',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'A podcast where we interview philosophers and discuss their work. We also interview our published authors to discuss their work and philosophy.',
         icon: 'tabler:components',
       },
       {
         title: 'Community',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+          'A Discord server where we discuss philosophy and host FAQs about upcoming journal prompts and submissions. Open to all who are interested!',
         icon: 'tabler:list-check',
       },
       {
         title: 'Resources',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'We provide a collection of online resources for youth to learn philosophy. Ever-in-progress, feel free to contact us for any suggestions or features.',
         icon: 'tabler:rocket',
       },
     ]}
-  />
+  >
+    <!-- <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment> -->
+  </Features>
+  
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <!-- <Features2
     title="Most used widgets"
     subtitle="Provides frequently used components for building websites using Tailwind CSS"
     tagline="Components"
@@ -132,55 +137,58 @@ const metadata = {
     ]}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-purple-50 dark:bg-transparent"></div>
     </Fragment>
-  </Features2>
+  </Features2> -->
 
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
+    title="Essays from the 2022 Dialexicon Journal"
+    information={`The 2022 Dialexicon Journal published articles covering all sorts of philosophical topics and current events,
+    from student authors based all around the world. Celebrating our third year of running the journal.
                 `}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    subtitle="Questions about submitting to the journal & how to get involved."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: 'Why was Dialexicon founded?',
         description:
           "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
       },
       {
-        title: 'What do I need to start?',
+        title: 'Who can submit to the Dialexicon Journal?',
         description:
           'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'When will I know the results?',
         description:
           "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
       },
       {
-        title: "What's something that you don't understand?",
+        title: "Who will be adjudicating my paper?",
         description:
           "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'Can I answer my own prompt?',
         description:
           "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'How do I get involved with Dialexicon',
         description:
           "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
       },
@@ -189,22 +197,22 @@ const metadata = {
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!-- <Stats
     stats={[
       { title: 'Downloads', amount: '132K' },
       { title: 'Stars', amount: '24.8K' },
       { title: 'Forks', amount: '10.3K' },
       { title: 'Users', amount: '48.4K' },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
+  <!-- <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
+        text: 'Submit to the Journal',
         href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
         icon: 'tabler:download',
@@ -212,12 +220,10 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
+      Interested in submitting to the journal?
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Be very surprised by these huge fake numbers you are seeing on this page.
     </Fragment>
-  </CallToAction>
+  </CallToAction> -->
 </Layout>
