@@ -11,12 +11,6 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import {
-  BackgroundImage,
-  ImageSupportDetection,
-} from "astro-imagetools/components";
-
-import socratesImage from './images/socrates.jpg';
 
 
 const metadata = {
@@ -28,7 +22,31 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
+  <div style=
+  `background-image: url(./src/images/socrates.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh`>
+
+  <div>
+    <span class="text-white font-bold text-8xl absolute left-24 top-20" style="font-family:serif"> Dialexicon </span>
+    <span class="text-white text-2xl absolute left-24 top-44" style="font-family:serif"> Bringing philosophy to youth. </span>
+    <span class="text-purple-500 text-md absolute left-24 top-56" style="font-family:serif"> dialexicon = <span class="text-red-400"> dialectic ('reasoning through opposing arguments') </span> + <span class="text-blue-400"> lexicon ('vocabulary')</span></span>
+
+    <a href="./about" class="text-white font-bold text-xl absolute right-56 top-10" style="font-family:serif">About </a>
+    <a href="./submit" class="text-white font-bold text-xl absolute right-36 top-10" style="font-family:serif"> Submit </a>
+    <a href="#" class="text-white font-bold text-xl absolute right-16 top-10" style="font-family:serif"> Journal </a>
+    
+    <span class="text-white text-xl absolute right-12 bottom-10" style="font-family:serif"> Death of Socrates, by Jacques-Louis David. </span>
+
+    <!-- <a class="text-white font-bold text-xl absolute right-10 top-10" style="font-family:serif"> Community </a> -->
+
+  </div>
+
+  
+
+  <!-- <Hero
     actions={[
       { text: 'Learn more', href: '#features' },
       {
@@ -38,27 +56,27 @@ const metadata = {
         target: '_blank',
         icon: 'tabler:download',
       },
-    ]}
-    image={{ src: './images/socrates.jpg', alt: 'Death of Socrates' }}
-  >
+    ]}>
+    image={{ src: './src/images/socrates.jpg', alt: 'Death of Socrates' }}
+
     <Fragment slot="title">
-      <span class=text-7xl> Welcome to </span> <span class="text-blue-700 dark:text-white highlight font-extrabold text-7xl"> Dialexicon</span>
+      <span class="text-7xl text-white"> Welcome to </span> <span class="text-blue-700 dark:text-white highlight font-extrabold text-7xl"> Dialexicon</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden md:inline leading-relaxed">
         <span class="font-semibold"> A platform for youth to engage in philosophy. </span>     
         <br/>   
-        <span class="text-purple-700 text-sm"> Dialexicon = <span class="text-red-600"> dialectic (Hegel/Plato: 'philosophical discourse') </span> + <span class="text-blue-600"> lexicon ('vocabulary')</span></span>
+        <span class="text-purple-700 text-sm"> Dialexicon = <span class="text-red-600"> dialectic ('reasoning through opposing arguments') </span> + <span class="text-blue-600"> lexicon ('vocabulary')</span></span>
     </Fragment>
-  </Hero>
-
+  </Hero> -->
+  </div>
   <!-- Features Widget *************** -->
-
+<div style="font-family:Georgia, 'Times New Roman', Times, serif">
   <Features
     id="features"
     tagline="Projects"
-    title="How to Get Involved with Dialexicon"
+    title="How to Get Involved"
     subtitle="We're focused on ways to bring philosophical education to high-school students."
     items={[
       {
@@ -87,9 +105,9 @@ const metadata = {
       },
     ]}
   >
-    <!-- <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment> -->
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-black-600 dark:bg-transparent"></div>
+    </Fragment>
   </Features>
   
 
@@ -143,7 +161,7 @@ const metadata = {
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <BlogLatestPosts
+  <!-- <BlogLatestPosts
     title="Essays from the 2022 Dialexicon Journal"
     information={`The 2022 Dialexicon Journal published articles covering all sorts of philosophical topics and current events,
     from student authors based all around the world. Celebrating our third year of running the journal.
@@ -152,13 +170,13 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </BlogLatestPosts>
+  </BlogLatestPosts> -->
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Questions about submitting to the journal & how to get involved."
+    subtitle="Answers to your questions about submitting to the journal & how to get involved."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
@@ -175,7 +193,7 @@ const metadata = {
       {
         title: 'When will I know the results?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more.",
       },
       {
         title: "Who will be adjudicating my paper?",
@@ -226,4 +244,5 @@ const metadata = {
       Be very surprised by these huge fake numbers you are seeing on this page.
     </Fragment>
   </CallToAction> -->
+</div>
 </Layout>
