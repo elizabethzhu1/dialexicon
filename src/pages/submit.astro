@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import FAQs from "~/components/widgets/FAQs.astro";
 import Hero from '~/components/widgets/Hero.astro';
+import Steps from '~/components/widgets/Steps.astro';
 
 const metadata = {
   title: 'Dialexicon',
@@ -13,21 +14,55 @@ const metadata = {
 
     <div style="font-family:'Times New Roman', Times, serif">
 
-        <div style=
-        `background-image: url(./src/images/writing.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        height: 800px`>
+    <div style=
+    `background-image: url(./src/images/writing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh`>
 
-    <a href="./about" class="text-white font-bold text-xl absolute right-56 top-10" style="font-family:serif">About </a>
-    <a href="./submit" class="text-white font-bold text-xl absolute right-36 top-10" style="font-family:serif"> Submit </a>
-    <a href="#" class="text-white font-bold text-xl absolute right-16 top-10" style="font-family:serif"> Journal </a>
+    <div class="flex flex-row gap-5 absolute right-10 top-10">
+        <a href="./" class="text-white font-bold text-xl" style="font-family:serif">Home</a>
+        <a href="./about" class="text-white font-bold text-xl" style="font-family:serif">About </a>
+        <a href="./submit" class="text-white font-bold text-xl" style="font-family:serif"> Submit </a>
+        <a href="#" class="text-white font-bold text-xl" style="font-family:serif"> Journal </a>
+    </div>
     
     <span class="text-white font-bold text-8xl absolute left-24 top-20" style="font-family:serif"> Submit </span>
     <span class="text-white text-2xl absolute left-24 top-44" style="font-family:serif"> To the Dialexicon Journal. </span>
 
   </div>
+    <Steps
+        title="How do I submit my work?"
+        items={[
+        {
+            title: 'Step 1: <span class="font-medium">Download</span>',
+            description:
+            "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+            icon: 'tabler:package',
+        },
+        {
+            title: 'Step 2: <span class="font-medium">Add content</em>',
+            description:
+            "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+            icon: 'tabler:letter-case',
+        },
+        {
+            title: 'Step 3: <span class="font-medium">Customize styles</span>',
+            description:
+            'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+            icon: 'tabler:paint',
+        },
+        {
+            title: 'Ready!',
+            icon: 'tabler:check',
+        },
+        ]}
+        image={{
+        src: './src/images/the-philosophers-master-of-the-judgment-of-solomon.jpg',
+        alt: 'Steps image',
+        }}
+    />
 
     <FAQs
         title="Frequently Asked Questions"

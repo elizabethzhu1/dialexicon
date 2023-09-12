@@ -30,21 +30,23 @@ const metadata = {
   height: 100vh`>
 
   <div>
-    <span class="text-white font-bold text-8xl absolute left-24 top-20" style="font-family:serif"> Dialexicon </span>
-    <span class="text-white text-2xl absolute left-24 top-44" style="font-family:serif"> Bringing philosophy to youth. </span>
-    <span class="text-purple-500 text-md absolute left-24 top-56" style="font-family:serif"> dialexicon = <span class="text-red-400"> dialectic ('reasoning through opposing arguments') </span> + <span class="text-blue-400"> lexicon ('vocabulary')</span></span>
+    <span class="text-white font-bold text-8xl absolute left-20 top-20" style="font-family:serif"> Dialexicon </span>
+    <span class="text-white text-2xl absolute left-20 top-44" style="font-family:serif"> Bringing philosophy to youth. </span>
+    <span class="text-purple-500 text-md absolute left-20 top-56" style="font-family:serif"> dialexicon = <span class="text-red-400"> dialectic ('reasoning through opposing arguments') </span> + <span class="text-blue-400"> lexicon ('vocabulary')</span></span>
 
-    <a href="./about" class="text-white font-bold text-xl absolute right-56 top-10" style="font-family:serif">About </a>
-    <a href="./submit" class="text-white font-bold text-xl absolute right-36 top-10" style="font-family:serif"> Submit </a>
-    <a href="#" class="text-white font-bold text-xl absolute right-16 top-10" style="font-family:serif"> Journal </a>
-    
-    <span class="text-white text-xl absolute right-12 bottom-10" style="font-family:serif"> Death of Socrates, by Jacques-Louis David. </span>
+    <div class="flex flex-row gap-5 absolute right-10 top-10">
+      <a href="./" class="text-white font-bold text-xl" style="font-family:serif">Home</a>
+      <a href="./about" class="text-white font-bold text-xl" style="font-family:serif">About </a>
+      <a href="./submit" class="text-white font-bold text-xl" style="font-family:serif"> Submit </a>
+      <a href="#" class="text-white font-bold text-xl" style="font-family:serif"> Journal </a>
+    </div>
+
+    <span class="text-white text-lg absolute right-8 bottom-4" style="font-family:serif"> Death of Socrates, by Jacques-Louis David. </span>
 
     <!-- <a class="text-white font-bold text-xl absolute right-10 top-10" style="font-family:serif"> Community </a> -->
 
   </div>
-
-  
+    
 
   <!-- <Hero
     actions={[
@@ -73,7 +75,133 @@ const metadata = {
   </div>
   <!-- Features Widget *************** -->
 <div style="font-family:Georgia, 'Times New Roman', Times, serif">
-  <Features
+
+  <div class="ml-20 mr-20 mt-10 mb-20">
+    <span class="text-3xl text-blue-900 font-bold mb-5"> What is Dialexicon? </span>
+    <div class="mt-3 text-lg gap-2" style="line-height: 2">
+    <p> Dialexicon is a platform for youth to learn, discuss, and write about philosophy. </p>
+    <p> At the heart of the platform is our <a href="./journal">journal</a>, which publishes exceptional philosophical essays written by youth. </p>
+    </div>
+  </div>
+
+  <!-- <div class="px-8 2xl:max-w-7xl mx-auto py-32">
+    <div class="space-y-2">
+      <div
+        class="h-0.5 bg-secondary"
+        data-aos="fade-up"
+        data-aos-duration="1000">
+      </div>
+      <h3
+        class="text-secondary text-xs font-medium"
+        data-aos="fade-up"
+        data-aos-duration="1500">
+        <span>Get</span>
+        <span class="font-bold">Involved</span>
+      </h3>
+    </div>
+    <ul
+      class="mx-auto grid grid-cols-1 sm:grid-cols-2 text-secondary md:grid-cols-3 lg:grid-cols-4 items-start gap-6 mt-32"
+      role="list">
+      <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="1500">
+        <a href="https://www.lexingtonthemes.com/">
+          <div class="h-full flex flex-col justify-between">
+            <div>
+              <p
+                class="group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                01.
+              </p>
+              <p class="italic shrink-0">about</p>
+              <p class="text-xs mt-3 leading-relaxed">
+                Premium themes and UI Kits For designers, developers,
+                businesses, and personal use — Beautifully crafted with
+                Astro.js, and Tailwind CSS — Simple & easy to customize.
+              </p>
+            </div>
+            <div>
+              <p class="mt-3 text-xs font-semibold">
+                Check out Lexington Themes &nbsp; ↗
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2000">
+        <a href="https://www.windstatic.com/">
+          <div class="h-full flex flex-col justify-between">
+            <div>
+              <p
+                class="group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                02.
+              </p>
+              <p class="italic shrink-0">submit</p>
+              <p class="text-xs mt-3 leading-relaxed">
+                A set of 161 elements & layouts made with Tailwind CSS and
+                Alpine.js Skillfully designed with an eye for aesthetics,
+                offering an excellent starting point for your upcoming project.
+              </p>
+            </div>
+            <div>
+              <p class="mt-3 text-xs font-semibold">
+                Have a look to Windstatic &nbsp; ↗
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2500">
+        <a href="https://www.colorsandfonts.com/">
+          <div class="h-full flex flex-col justify-between">
+            <div>
+              <p
+                class="group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                03.
+              </p>
+              <p class="italic shrink-0">journal</p>
+              <p class="text-xs mt-3 leading-relaxed">
+                Color and typography resources and inspiration ━ for Web
+                Developers and Digital Designers.
+              </p>
+            </div>
+            <div>
+              <p class="mt-3 text-xs font-semibold">
+                Grab some hues on Colors & fonts &nbsp; ↗
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="3000">
+        <a href="https://www.svgdoodles.com/">
+          <div class="h-full flex flex-col justify-between">
+            <div>
+              <p
+                class="group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                04.
+              </p>
+              <p class="italic shrink-0">resources </p>
+              <p class="text-xs mt-3 leading-relaxed">
+               A free collection of 208 super duper.
+              </p>
+            </div>
+            <div>
+              <p class="mt-3 text-xs font-semibold">
+                Get some wallpapers &nbsp; ↗
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <div class="mt-32 space-y-2">
+      <div class="h-0.5 bg-secondary"></div>
+      <h3 class="text-secondary text-xs font-medium">
+        <span>Other</span>
+        <span class="font-bold">projects</span>
+      </h3>
+    </div>
+  </div>
+   -->
+  <!-- <Features
     id="features"
     tagline="Projects"
     title="How to Get Involved"
@@ -108,7 +236,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-black-600 dark:bg-transparent"></div>
     </Fragment>
-  </Features>
+  </Features> -->
   
 
   <!-- Features2 Widget ************** -->
@@ -171,47 +299,6 @@ const metadata = {
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </BlogLatestPosts> -->
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Answers to your questions about submitting to the journal & how to get involved."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why was Dialexicon founded?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'Who can submit to the Dialexicon Journal?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'When will I know the results?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more.",
-      },
-      {
-        title: "Who will be adjudicating my paper?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'Can I answer my own prompt?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'How do I get involved with Dialexicon',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
 
   <!-- Stats Widget ****************** -->
 
