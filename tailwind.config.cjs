@@ -16,6 +16,10 @@ module.exports = {
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle at center, transparent 20%, rgba(0, 0, 0, 0.9) 100%)',
+      },
+      
     },
   },
   plugins: [require('@tailwindcss/typography')],
