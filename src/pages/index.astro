@@ -1,335 +1,258 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
+import FAQs from "~/components/widgets/FAQs.astro";
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
 
 const metadata = {
   title: 'Dialexicon',
   ignoreTitleTemplate: true,
 };
 ---
-
+<body style="background-color:rgb(234, 229, 223); background-position:cover">
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <div style=
-  `background-image: url(./src/images/socrates.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100vh`>
-
-  <div>
-    <span class="text-white font-bold text-8xl absolute left-20 top-20" style="font-family:serif"> Dialexicon </span>
-    <span class="text-white text-2xl absolute left-20 top-44" style="font-family:serif"> Bringing philosophy to youth. </span>
-    <span class="text-purple-500 text-md absolute left-20 top-56" style="font-family:serif"> dialexicon = <span class="text-red-400"> dialectic ('reasoning through opposing arguments') </span> + <span class="text-blue-400"> lexicon ('vocabulary')</span></span>
-
-    <div class="flex flex-row gap-5 absolute right-10 top-10">
-      <a href="./" class="text-white font-bold text-xl" style="font-family:serif">Home</a>
-      <a href="./about" class="text-white font-bold text-xl" style="font-family:serif">About </a>
-      <a href="./submit" class="text-white font-bold text-xl" style="font-family:serif"> Submit </a>
-      <a href="#" class="text-white font-bold text-xl" style="font-family:serif"> Journal </a>
+<div style="font-family:'Times New Roman', Times, serif;">
+    <div class="mt-14 ml-16">
+        <span class="text-blue-900 font-bold text-9xl italic hover:not-italic" style="font-family:serif;"> Dialexicon </span>
+        <span class="text-blue-900 text-xl" style="font-family:serif;"> Bringing philosophy to youth. </span>
     </div>
+    <span class="text-blue-900 text-md ml-16" style="font-family:serif;"> <span class="text-purple-700 font-bold">dialexicon </span> = <span class="text-blue-700 font-semibold">dialectic ('reasoning through opposition') </span> + <span class="text-red-700 font-semibold">lexicon ('vocabulary')</span></span>
 
-    <span class="text-white text-lg absolute right-8 bottom-4" style="font-family:serif"> Death of Socrates, by Jacques-Louis David. </span>
 
-    <!-- <a class="text-white font-bold text-xl absolute right-10 top-10" style="font-family:serif"> Community </a> -->
-
-  </div>
+    <div class="flex flex-row gap-4 absolute right-14 top-10 font-regular text-black">
+        <a href="#about" class="text-xl hover:italic" style="font-family:serif">About </a>
+        <a href="./journal" class="text-xl hover:italic" style="font-family:serif"> Journal </a>
+        <a href="./submit" class="text-xl hover:italic" style="font-family:serif"> Submit </a>
+    </div>
     
-
-  <!-- <Hero
-    actions={[
-      { text: 'Learn more', href: '#features' },
-      {
-        variant: 'primary',
-        text: 'Journal',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}>
-    image={{ src: './src/images/socrates.jpg', alt: 'Death of Socrates' }}
-
-    <Fragment slot="title">
-      <span class="text-7xl text-white"> Welcome to </span> <span class="text-blue-700 dark:text-white highlight font-extrabold text-7xl"> Dialexicon</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden md:inline leading-relaxed">
-        <span class="font-semibold"> A platform for youth to engage in philosophy. </span>     
-        <br/>   
-        <span class="text-purple-700 text-sm"> Dialexicon = <span class="text-red-600"> dialectic ('reasoning through opposing arguments') </span> + <span class="text-blue-600"> lexicon ('vocabulary')</span></span>
-    </Fragment>
-  </Hero> -->
-  </div>
-  <!-- Features Widget *************** -->
-<div style="font-family:Georgia, 'Times New Roman', Times, serif">
-
-  <div class="ml-20 mr-20 mt-10 mb-20">
-    <span class="text-3xl text-blue-900 font-bold mb-5"> What is Dialexicon? </span>
-    <div class="mt-3 text-lg gap-2" style="line-height: 2">
-    <p> Dialexicon is a platform for youth to learn, discuss, and write about philosophy. </p>
-    <p> At the heart of the platform is our <a href="./journal">journal</a>, which publishes exceptional philosophical essays written by youth. </p>
-    </div>
-  </div>
-
-  <!-- <div class="px-8 2xl:max-w-7xl mx-auto py-32">
-    <div class="space-y-2">
+    <div>
+    <div class="px-8 2xl:max-w-7xl mx-auto py-6 ml-7 mr-7">
+    <div class="space-y-1 mt-1">
       <div
-        class="h-0.5 bg-secondary"
+        class="h-0.5 bg-blue-800"
         data-aos="fade-up"
         data-aos-duration="1000">
       </div>
-      <h3
-        class="text-secondary text-xs font-medium"
+      <!-- <div
+      class="h-1 bg-blue-800"
+      data-aos="fade-up"
+      data-aos-duration="1000">
+    </div>
+    <div
+    class="h-2 bg-blue-800"
+    data-aos="fade-up"
+    data-aos-duration="1000">
+  </div> -->
+      <!-- <h3
+        class="text-secondary text-2xl font-medium"
         data-aos="fade-up"
         data-aos-duration="1500">
-        <span>Get</span>
-        <span class="font-bold">Involved</span>
-      </h3>
+        <span>Our </span>
+        <span class="font-bold">Pillars</span>
+
+      </h3> -->
     </div>
     <ul
-      class="mx-auto grid grid-cols-1 sm:grid-cols-2 text-secondary md:grid-cols-3 lg:grid-cols-4 items-start gap-6 mt-32"
+      class="mx-auto grid grid-cols-1 sm:grid-cols-2 text-secondary md:grid-cols-3 lg:grid-cols-4 items-start gap-6 mt-4"
       role="list">
       <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="1500">
-        <a href="https://www.lexingtonthemes.com/">
-          <div class="h-full flex flex-col justify-between">
+        <a href="./submit">
+          <div class="h-full flex flex-col justify-between hover:text-blue-700 hover:border-4 rounded-3xl p-4 hover:border-blue-700">
             <div>
-              <p
-                class="group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+              <!-- <p
+                class="bg-url(./src/images/1024px-School-of-athens2.jpg) ml-5 hover:text-black group-hover:hover:text-black text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
                 01.
+              </p> -->
+              <img src="src/images/DP-13139-001-1.jpg" alt="Death of Socrates" class="mt-5 bg-black opacity-100 hover:opacity-70 rounded-3xl object-cover object-top overflow-hidden h-52 w-48 xl:h-72 xl:w-72 mb-5 ">
+              <div class="ml-1">
+              <p class="italic font-semibold shrink-0">JOURNAL</p>
+              <p class="text-md mt-3 leading-relaxed w-72">
+                Our annual journal publishes philosophical writing from high school students.
               </p>
-              <p class="italic shrink-0">about</p>
-              <p class="text-xs mt-3 leading-relaxed">
-                Premium themes and UI Kits For designers, developers,
-                businesses, and personal use — Beautifully crafted with
-                Astro.js, and Tailwind CSS — Simple & easy to customize.
-              </p>
+              </div>
             </div>
             <div>
-              <p class="mt-3 text-xs font-semibold">
-                Check out Lexington Themes &nbsp; ↗
+              <p class="ml-1 mt-3 text-md font-semibold">
+                submit to our journal &nbsp; ↗
               </p>
             </div>
           </div>
         </a>
       </li>
       <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2000">
-        <a href="https://www.windstatic.com/">
-          <div class="h-full flex flex-col justify-between">
+        <a href="https://open.spotify.com/show/6ab9iObuaUb0VDo4R9lLH4">
+          <div class="h-full flex flex-col justify-between hover:text-blue-700 hover:border-4 rounded-3xl p-4 hover:border-blue-700">
             <div>
-              <p
-                class="group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+              <!-- <p
+                class="ml-5 hover:text-black group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
                 02.
+              </p> -->
+              <img src="src/images/the-philosophers-master-of-the-judgment-of-solomon.jpg" alt="Death of Socrates" class="mt-5 opacity-100 hover:opacity-70 rounded-3xl object-cover object-center overflow-hidden h-52 w-48 xl:h-72 xl:w-72 mb-5 ">
+              <div class="ml-1">
+              <p class="italic font-semibold shrink-0">PODCAST</p>
+              <p class="text-md mt-3 leading-relaxed">
+                We interview philosophers of all backgrounds
+                and our published authors.
               </p>
-              <p class="italic shrink-0">submit</p>
-              <p class="text-xs mt-3 leading-relaxed">
-                A set of 161 elements & layouts made with Tailwind CSS and
-                Alpine.js Skillfully designed with an eye for aesthetics,
-                offering an excellent starting point for your upcoming project.
-              </p>
+              </div>
             </div>
             <div>
-              <p class="mt-3 text-xs font-semibold">
-                Have a look to Windstatic &nbsp; ↗
+              <p class="ml-1 mt-3 text-md font-semibold">
+                listen to our podcast &nbsp; ↗
               </p>
             </div>
           </div>
         </a>
       </li>
       <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2500">
-        <a href="https://www.colorsandfonts.com/">
-          <div class="h-full flex flex-col justify-between">
+        <a href="https://discord.com/invite/J5RzXgQRWK">
+          <div class="h-full flex flex-col justify-between hover:text-blue-700 hover:border-4 rounded-xl p-4 hover:border-blue-700">
             <div>
-              <p
-                class="group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+              <!-- <p
+                class="ml-5 hover:text-black group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
                 03.
+              </p> -->
+              <img src="src/images/aristotle-and-plato-school-of-athens-raphael.jpg" alt="Death of Socrates" class="mt-5 opacity-100 hover:opacity-70 rounded-3xl object-cover object-top overflow-hidden h-52 w-48 xl:h-72 xl:w-72 mb-5 ">
+              <div class="ml-1">
+              <p class="italic font-semibold shrink-0">COMMUNITY</p>
+              <p class="text-md mt-3 leading-relaxed">
+                Discuss philosophy with other youth on our Discord,
+                and ask journal-related questions.
               </p>
-              <p class="italic shrink-0">journal</p>
-              <p class="text-xs mt-3 leading-relaxed">
-                Color and typography resources and inspiration ━ for Web
-                Developers and Digital Designers.
-              </p>
+              </div>
             </div>
             <div>
-              <p class="mt-3 text-xs font-semibold">
-                Grab some hues on Colors & fonts &nbsp; ↗
+              <p class="ml-1 mt-3 text-md font-semibold">
+                join the discord &nbsp; ↗
               </p>
             </div>
           </div>
         </a>
       </li>
       <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="3000">
-        <a href="https://www.svgdoodles.com/">
-          <div class="h-full flex flex-col justify-between">
+        <a href="./resources">
+          <div class="h-full flex flex-col justify-between hover:text-blue-700 hover:border-4 rounded-xl p-4 hover:border-blue-700">
             <div>
-              <p
-                class="group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+              <!-- <p
+                class="ml-5 hover:text-black group-hover:text-secondary/70 text-secondary text-9xl font-bold lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
                 04.
+              </p> -->
+              <img src="src/images/reading.jpg" alt="Death of Socrates" class="mt-5 opacity-100 hover:opacity-70 rounded-3xl object-cover object-center overflow-hidden h-52 w-48 xl:h-72 xl:w-72 mb-5 ">
+
+              <div class="ml-1">
+              <p class="italic font-semibold shrink-0">RESOURCES</p>
+              <p class="text-md mt-3 leading-relaxed">
+               A collection of accessible philosophy resources,
+               curated for high school students.
               </p>
-              <p class="italic shrink-0">resources </p>
-              <p class="text-xs mt-3 leading-relaxed">
-               A free collection of 208 super duper.
-              </p>
+              </div>
             </div>
             <div>
-              <p class="mt-3 text-xs font-semibold">
-                Get some wallpapers &nbsp; ↗
+              <p class="ml-1 mt-3 text-md font-semibold">
+                read the resources &nbsp; ↗
               </p>
             </div>
           </div>
         </a>
       </li>
     </ul>
-    <div class="mt-32 space-y-2">
+    <div class="mt-8 space-y-2" id="about">
       <div class="h-0.5 bg-secondary"></div>
-      <h3 class="text-secondary text-xs font-medium">
-        <span>Other</span>
-        <span class="font-bold">projects</span>
-      </h3>
+    </div>
+    <div class="mt-1 space-y-2 ">
+      <div class="h-1 bg-secondary"></div>
+    </div>
+    <div class="mt-1 space-y-2 ">
+        <div class="h-2 bg-secondary"></div>
+    </div>
+    <div class="mt-1 space-y-2 ">
+    <div class="h-3 bg-secondary"></div>
     </div>
   </div>
-   -->
-  <!-- <Features
-    id="features"
-    tagline="Projects"
-    title="How to Get Involved"
-    subtitle="We're focused on ways to bring philosophical education to high-school students."
-    items={[
-      {
-        title: 'Journal',
-        description:
-          'An annual journal for high-school students to publish their philosophical essays. We publish all kinds of essays, from metaphysics to contemporary ethics.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Podcast',
-        description:
-          'A podcast where we interview philosophers and discuss their work. We also interview our published authors to discuss their work and philosophy.',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Community',
-        description:
-          'A Discord server where we discuss philosophy and host FAQs about upcoming journal prompts and submissions. Open to all who are interested!',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Resources',
-        description:
-          'We provide a collection of online resources for youth to learn philosophy. Ever-in-progress, feel free to contact us for any suggestions or features.',
-        icon: 'tabler:rocket',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-black-600 dark:bg-transparent"></div>
-    </Fragment>
-  </Features> -->
+
+    </div>
   
+  <div>
+    <h1 class="text-blue-900 text-3xl mt-3 ml-16 italic"> As Plutarch once proclaimed, "Philosophy is the art of living." </h1>
+    <div class="text-black ml-16 mr-14 mt-8 text-xl whitespace-pre-wrap">
+    <p>In today's age, it is easy to get lost in the weeds.
 
-  <!-- Features2 Widget ************** -->
+We are drowning in content, news, gossip, and clutter. Sometimes, we forget to close our eyes and think.
+        
+What if we were to step into the mind of a philosopher? <span class="italic whitespace-pre-wrap">To pose big questions about the world and rethink what we read?
 
-  <!-- <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-purple-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2> -->
+</span>
+            
+Philosophical thinking can be found in the <span class="font-bold text-blue-900">ordinary</span> and the <span class="font-bold text-blue-900">familiar</span>, not just the <span class="italic">new</span> and <span class="italic">profound</span>. 
 
-  <!-- HighlightedPosts Widget ******* -->
+All the while, philosophy delights in the <span class="italic font-bold text-blue-900">unknown</span>:
 
-  <!-- <BlogLatestPosts
-    title="Essays from the 2022 Dialexicon Journal"
-    information={`The 2022 Dialexicon Journal published articles covering all sorts of philosophical topics and current events,
-    from student authors based all around the world. Celebrating our third year of running the journal.
-                `}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts> -->
+    ... in posing questions that might not have immediate or clear answers, but are worth asking for the sake of curiosity!
 
-  <!-- Stats Widget ****************** -->
+As children, we are natural philosophers, asking daunting questions about seemingly self-evident subjects: 
 
-  <!-- <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  /> -->
+<span class="italic whitespace-pre-wrap">
+    Why is the sky <span class="text-blue-900">blue</span>? 
+        Why do we have to listen to our parents?
+                What is friendship?
+                        Why is there something rather than nothing? 
+</span>
+    
+Dialexicon is a project to revive these questions, by giving youth a space to express their philosophical ideas.
+    </p>
 
-  <!-- CallToAction Widget *********** -->
+    <div class="mt-10 mb-5">
+        <span class="text-blue-900 italic text-3xl">Thinking like a philosopher is essential in the 21st century.</span>
+        <p class="text-xl whitespace-pre-wrap">
+<!-- The biggest problems we face are not due to a lack of resources, but a lack of collective thought.
 
-  <!-- <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Submit to the Journal',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Interested in submitting to the journal?
+Poverty stems from a lack of redistribution, not scarcity.
+Climate change stems from human-caused pollution and the tragedy of the commons.
+War stems from fragmentation and political mismanagement.
+Technological abuse threatens a new frontier where our privacy, liberty, and equality are at risk.
 
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page.
-    </Fragment>
-  </CallToAction> -->
+To combat these problems, we need philosophy more than ever.  -->
+
+We know that humans are great at creating tools. But philosophy teaches us <span class="italic font-semibold text-blue-900">when</span> and <span class="italic font-semibold text-blue-900">how</span> to use those tools in just and beneficial ways. 
+
+<span class="italic font-semibold text-blue-900">
+    Political philosophy</span> shows us how to organize ourselves.
+<span class="italic font-semibold text-blue-900">Ethics</span> guides us in how we ought to treat one another.
+<span class="italic font-semibold text-blue-900">Metaphysics</span> teaches us to question the universe.
+<span class="italic font-semibold text-blue-900">Existentialism</span> brings us to question our place in it.
+
+Beyond that, thinking like a philosopher trains you to be a problem-solver, a persuasive orator, and a critical thinker. 
+
+Dialexicon is the first step on that journey, beginning with youth.
+        </p>
+    </div>
+
+    <div class="mt-10 space-y-2 ">
+        <div class="h-0.5 bg-secondary"></div>
+    </div>
+
+    <div class="mt-8 mb-10">
+    <span class="text-blue-900 font-semibold text-4xl">Why was Dialexicon created?</span>
+    <div>
+    <p class="text-xl whitespace-pre-wrap">
+<span class="italic whitespace-pre-wrap">
+    Here are some reasons why Dialexicon came into existence:
+</span>   
+<p class="ml-2">
+1. To fill the chasm of philosophy opportunities and resources for high school students.
+2. To share the voices and philosophical opinions of youth with a global audience.
+3. To provide a forum for youth to discuss philosophy with other engaged youth.
+4. To distill complex philosophical ideas to be approachable for youth.
+</p>
+Dialexicon seeks to close a gap in access to philosophy opportunities and resources for youth,
+offering a platform tailored to middle and high school students who love philosophy.
+
+If you're a new visitor, welcome to Dialexicon.
+
+    </p>
+    </div>
+    </div>
 </div>
+
 </Layout>
+</div>
