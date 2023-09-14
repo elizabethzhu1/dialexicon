@@ -26,8 +26,8 @@ export interface Props {
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
 ---
 
-<footer class:list={['relative not-prose']}>
-  <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+<footer class:list={['relative not-prose']} style="background-color:#F9F6EE">
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
     <div class="md:flex md:items-center md:justify-between py-6 md:py-8 ml-8 mr-8">
       {
         socialLinks?.length ? (
@@ -35,7 +35,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             {socialLinks.map(({ ariaLabel, href, text, icon }) => (
               <li>
                 <a
-                  class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                  class="text-muted hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 rounded-lg text-sm p-2.5 inline-flex items-center"
                   aria-label={ariaLabel}
                   href={href}
                 >
@@ -50,7 +50,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         )
       }
 
-      <div class="text-sm ml-6 mr-6 dark:text-slate-400" style="font-family:'Times New Roman', Times, serif">
+      <div class="text-sm ml-6 mr-6" style="font-family:'Times New Roman', Times, serif">
         <Fragment set:html={footNote} />
       </div>
     </div>
