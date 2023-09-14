@@ -25,8 +25,8 @@ const whenExternalScripts = (items = []) =>
     : [];
 
 export default defineConfig({
-  site: 'https://elizabeth.github.io', // CHANGE AFTER DEPLOY TO PRODUCTION
-  base: '/dialexicon',
+  site: SITE.site,
+  base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
   output: 'static',
