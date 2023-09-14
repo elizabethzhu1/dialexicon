@@ -83,6 +83,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
-    © Dialexicon 2023. Powered by Astro.
+    &copy; Dialexicon 2023. Powered by Astro.
   `,
 };

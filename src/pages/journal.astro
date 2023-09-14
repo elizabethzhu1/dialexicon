@@ -1,0 +1,91 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Dialexicon',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <div style=
+  `background-image: url(./src/images/socrates.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh`>
+  <div>
+
+    <!-- <body id="spotlight"></body>
+    <link rel="stylesheet" href="/output.css">
+
+    <script>
+      const container = document.getElementById('spotlightContainer');
+
+      container.addEventListener('mouseenter', function() {
+          this.classList.add('spotlight', 'spotlight-active');
+      });
+
+      container.addEventListener('mousemove', function(e) {
+          const x = (e.clientX - this.offsetLeft) + "px";
+          const y = (e.clientY - this.offsetTop) + "px";
+
+          this.style.setProperty('--x', x);
+          this.style.setProperty('--y', y);
+      });
+
+      container.addEventListener('mouseleave', function() {
+          this.classList.remove('spotlight', 'spotlight-active');
+      });
+    </script> -->
+
+    <span class="text-white text-3xl" style="font-family:serif; position:absolute; right:22%; top:20%"> <span class="italic">Dialexicon</span> Vol. 3, 2023</span>    <!-- <span class="text-white text-2xl absolute left-20 top-44" style="font-family:serif"> Bringing philosophy to youth. </span>
+    <span class="text-purple-500 text-md absolute left-20 top-56" style="font-family:serif"> dialexicon = <span class="text-red-400"> dialectic ('reasoning through opposing arguments') </span> + <span class="text-blue-400"> lexicon ('vocabulary')</span></span> -->
+
+    <div class="text-white text-xl absolute left-10 top-8 flex flex-col " style="font-family:serif">
+      <!-- <span class="text-3xl ml-2 mb-2"> dialexicon vol. 3, 2023 </span> -->
+      <a href="./essays/yian" class="flex flex-row gap-1 hover:italic hover:text-blue-200 hover:border hover:border-white p-2 rounded-xl">
+        <span> I. Has Science Disproven Free Will?</span>
+        <span class="ml-1 italic text-blue-200"> Yi An Chan</span>
+      </a>
+      <a href="#" class="flex flex-row gap-1 hover:italic hover:text-blue-200 hover:border hover:border-white p-2 rounded-xl">
+        <span> II. The Good Person, the Good Citizen, and the Paradox of the Unjust Regime.</span>
+        <span class="ml-1 italic text-blue-200"> Sasha Johnson</span>
+      </a>
+      <a href="#" class="flex flex-row gap-1 hover:italic hover:text-blue-200 hover:border hover:border-white p-2 rounded-xl">
+        <span> III. Generative AI: A Blessing or a Curse for Artists?</span>
+        <span class="ml-1 italic text-blue-200"> Bernadett Osvay-Szabó</span>
+      </a>
+      <a href="#" class="flex flex-row gap-1 hover:italic hover:text-blue-200 hover:border hover:border-white p-2 rounded-xl">
+        <span> IV. The Polarized Express: An Analysis of Free Speech on Social Media.</span>
+        <span class="ml-1 italic text-blue-200"> Julian Zhang</span>
+      </a>
+      <a href="#" class="flex flex-row gap-1 hover:italic hover:text-blue-200 hover:border hover:border-white p-2 rounded-xl">
+        <span> V. The Case for Meaning: 'Through a Glass Darkly'.</span>
+        <span class="ml-1 italic text-blue-200"> Addison Moss</span>
+      </a>
+      <a href="#" class="flex flex-row gap-1 hover:italic hover:text-blue-200 hover:border hover:border-white p-2 rounded-xl">
+        <span> VI. Write Me an Essay on Generative AI.</span>
+        <span class="ml-1 italic text-blue-200"> Janus Tsen</span>
+      </a>
+    </div>
+    
+    <div class="flex flex-row gap-4 absolute right-14 top-10 font-regular text-white">
+    <!-- <div class="flex flex-row gap-4 absolute right-1/4 top-32 font-regular text-white"> -->
+      <a href="/" class="text-xl hover:italic" style="font-family:serif">Home </a>
+      <a href="./about" class="text-xl hover:italic" style="font-family:serif">About </a>
+      <a href="./journal" class="text-xl italic" style="font-family:serif"> Journal </a>
+      <a href="./submit" class="text-xl hover:italic" style="font-family:serif"> Submit </a>
+    </div>
+
+    <span class="text-white text-md absolute right-6 bottom-3" style="font-family:serif"> Death of Socrates, by Jacques-Louis David, 1787</span>
+
+    <!-- <a class="text-white font-bold text-xl absolute right-10 top-10" style="font-family:serif"> Community </a> -->
+
+  </div>
+    
+<div style="font-family:Georgia, 'Times New Roman', Times, serif">
+</div>
+</Layout>

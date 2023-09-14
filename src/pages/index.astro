@@ -3,56 +3,92 @@ import Layout from '~/layouts/PageLayout.astro';
 import FAQs from "~/components/widgets/FAQs.astro";
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
+import anime from 'animejs/lib/anime.es.js';
 
 const metadata = {
   title: 'Dialexicon',
   ignoreTitleTemplate: true,
 };
 ---
-<body style="background-color:#F9F6EE; background-position:cover">
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> -->
+<body style="background-color:#F9F6EE; background-position:cover; overflow-x:hidden">
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
 <Layout metadata={metadata}>
 <div style="font-family:'Times New Roman', Times, serif;">
-    <div class="mt-14 ml-16">
-        <span class="text-blue-900 font-bold text-9xl italic hover:not-italic" style="font-family:serif;"> Dialexicon </span>
-        <span class="text-blue-900 text-2xl" style="font-family:serif;"> Bringing philosophy to youth. </span>
+  <div style="height:100%">
+    <div class="mt-20 ml-16 flex flex-row items-end gap-7">
+        <!-- <span class="text-blue-900 font-bold text-9xl italic hover:not-italic" style="font-family:serif;"> Dialexicon </span> -->
+        <h1 class="m17 text-blue-900 font-bold text-9xl italic hover:not-italic" style="font-family:serif;">
+          <span class="text-wrapper">
+            <span class="letters">Dialexicon</span>
+          </span>
+        </h1>
+        <span class="text-blue-900 text-2xl mb-4" style="font-family:serif;"> Bringing philosophy to youth. </span>
     </div>
-    <span class="text-blue-900 text-md ml-16" style="font-family:serif;"> <span class="text-purple-700 font-bold">dialexicon </span> = <span class="text-blue-700 font-semibold">dialectic ('reasoning through opposition') </span> + <span class="text-red-700 font-semibold">lexicon ('vocabulary')</span></span>
+
+    <script> 
+    document.addEventListener('DOMContentLoaded', function () {
+      // Wrap every letter in a span
+      var textWrapper = document.querySelector('.letters');
+      textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+      anime.timeline({loop: true})
+        .add({
+          targets: '.ml7 .letter',
+          translateY: ["1.1em", 0],
+          translateX: ["0.55em", 0],
+          translateZ: 0,
+          rotateZ: [180, 0],
+          duration: 750,
+          easing: "easeOutExpo",
+          delay: (el, i) => 50 * i
+        }).add({
+          targets: '.ml7',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000
+        });
+    });
+    </script>
+    <style>
+      .ml7 {
+        position: relative;
+        font-weight: 900;
+        font-size: 3.7em;
+      }
+      .ml7 .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.2em;
+        padding-right: 0.05em;
+        padding-bottom: 0.1em;
+        overflow: hidden;
+      }
+      .ml7 .letter {
+        transform-origin: 0 100%;
+        display: inline-block;
+        line-height: 1em;
+      }
+    </style>
+    <span class="text-blue-900 text-lg ml-16" style="font-family:serif;"> <span class="text-purple-700 font-bold">dialexicon </span> = <span class="text-blue-700 font-semibold">dialectic ('reasoning through opposition') </span> + <span class="text-red-700 font-semibold">lexicon ('vocabulary')</span></span>
 
 
     <div class="flex flex-row gap-4 absolute right-14 top-10 font-regular text-black">
-        <a href="#about" class="text-xl italic" style="font-family:serif">About </a>
+      <a href="/" class="text-xl italic" style="font-family:serif">Home </a>
+        <a href="./about" class="text-xl" style="font-family:serif">About </a>
         <a href="./journal" class="text-xl hover:italic" style="font-family:serif"> Journal </a>
         <a href="./submit" class="text-xl hover:italic" style="font-family:serif"> Submit </a>
     </div>
     
-    <div>
-    <div class="px-8 2xl:max-w-7xl mx-auto py-6 ml-7 mr-7">
+    <div class="px-8 2xl:max-w-7xl mx-auto py-7 ml-7 mr-7">
     <div class="space-y-1 mt-1">
       <div
         class="h-0.5 bg-blue-800"
         data-aos="fade-up"
         data-aos-duration="1000">
       </div>
-      <!-- <div
-      class="h-1 bg-blue-800"
-      data-aos="fade-up"
-      data-aos-duration="1000">
-    </div>
-    <div
-    class="h-2 bg-blue-800"
-    data-aos="fade-up"
-    data-aos-duration="1000">
-  </div> -->
-      <!-- <h3
-        class="text-secondary text-2xl font-medium"
-        data-aos="fade-up"
-        data-aos-duration="1500">
-        <span>Our </span>
-        <span class="font-bold">Pillars</span>
-
-      </h3> -->
     </div>
     <ul
       class="mx-auto grid grid-cols-1 sm:grid-cols-2 text-blue-900 md:grid-cols-3 lg:grid-cols-4 items-start gap-6 mt-4"
@@ -75,7 +111,7 @@ const metadata = {
             </div>
             <div>
               <p class="ml-1 mt-3 text-md font-semibold">
-                read our journal &nbsp; ↗
+                read our journal
               </p>
             </div>
           </div>
@@ -100,7 +136,7 @@ const metadata = {
             </div>
             <div>
               <p class="ml-1 mt-3 text-md font-semibold">
-                listen to our podcast &nbsp; ↗
+                listen to our podcast
               </p>
             </div>
           </div>
@@ -125,7 +161,7 @@ const metadata = {
             </div>
             <div>
               <p class="ml-1 mt-3 text-md font-semibold">
-                join the discord &nbsp; ↗
+                join the discord
               </p>
             </div>
           </div>
@@ -151,103 +187,55 @@ const metadata = {
             </div>
             <div>
               <p class="ml-1 mt-3 text-md font-semibold">
-                read the resources &nbsp; ↗
+                read the resources
               </p>
             </div>
           </div>
         </a>
       </li>
     </ul>
-    <div class="mt-8 space-y-0.5" id="about">
-      <div class="h-0.5 bg-blue-800"></div>
     </div>
-    <div class="mt-1 space-y-0.5 ">
-      <div class="h-1 bg-blue-800"></div>
-    </div>
-    <div class="mt-1 space-y-0.5 ">
-        <div class="h-2 bg-blue-800"></div>
-    </div>
-  </div>
 
+    <div class="text-container text-4xl mt-2 text-blue-800">
+      <div id="text" class="text-part"> dialexicon vol 3 </div>
+      <div id="text" class="text-part"> dialexicon vol 3 </div>
+      <div id="text" class="text-part"> dialexicon vol 3 </div>
+      <div id="text" class="text-part"> dialexicon vol 3 </div>
+      <div id="text" class="text-part"> dialexicon vol 3 </div>
+      <div id="text" class="text-part"> dialexicon vol 3 </div>
+      <div id="text" class="text-part"> dialexicon vol 3 </div>
+      <div id="text" class="text-part"> dialexicon vol 3 </div>
+      <div id="text" class="text-part"> dialexicon vol 3 </div>
     </div>
+
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        // eslint-disable-next-line no-undef
+        let backward = gsap.to('.text-part', {
+            xPercent: -100,
+            repeat: -1,
+            duration: 5,
+            ease: "linear",
+            })
+            .totalProgress(0.5);
+    </script>
+
+    <style>
+        .text-container {
+          display: flex;
+          width: fit-content;
+          flex: auto;
+          flex-direction: row;
+        }
+
+        .text-part {
+          display: flex;
+          align-items: center;
+          flex-shrink: 0;
+          padding:0 4px;
+        }
+    </style>
   
-  <div class="ml-5">
-    <h1 class="text-blue-900 text-3xl mt-3 ml-16 italic"> As Plutarch once proclaimed, "Philosophy is the art of living." </h1>
-    <div class="text-black ml-16 mr-14 mt-8 text-xl whitespace-pre-wrap">
-    <p>In today's age, it is easy to get lost in the weeds.
-
-We are drowning in content, news, gossip, and clutter. Sometimes, we forget to close our eyes and think.
-        
-What if we were to step into the mind of a philosopher? <span class="italic whitespace-pre-wrap">To pose big questions about the world and rethink what we read?
-
-</span>
-            
-Philosophical thinking can be found in the <span class="text-blue-900">ordinary</span> and the <span class="text-blue-900">familiar</span>, not just the <span class="italic">new</span> and <span class="italic">profound</span>. 
-
-All the while, philosophy delights in the <span class="italic font-bold text-blue-900">unknown</span>:
-
-    ... in posing questions that might not have immediate or clear answers, but are worth asking for the sake of curiosity!
-
-As children, we are natural philosophers, asking daunting questions about seemingly self-evident subjects: 
-
-<span class="italic whitespace-pre-wrap">
-    Why is the sky <span class="text-blue-900">blue</span>? 
-        Why do we have to listen to our parents?
-                What is friendship?
-                        Why is there something rather than nothing? 
-</span>
-    
-Dialexicon is a project to revive these questions, by giving youth a space to express their philosophical ideas.
-    </p>
-
-    <div class="mt-10 mb-5">
-        <span class="text-blue-900 text-4xl">Thinking like a philosopher is essential in the 21st century.</span>
-        <p class="text-xl whitespace-pre-wrap">
-<!-- The biggest problems we face are not due to a lack of resources, but a lack of collective thought.
-
-Poverty stems from a lack of redistribution, not scarcity.
-Climate change stems from human-caused pollution and the tragedy of the commons.
-War stems from fragmentation and political mismanagement.
-Technological abuse threatens a new frontier where our privacy, liberty, and equality are at risk.
-
-To combat these problems, we need philosophy more than ever.  -->
-
-Humans are great at creating tools. But philosophy teaches us <span class="italic font-semibold text-blue-900">when</span> and <span class="italic font-semibold text-blue-900">how</span> to use those tools in just and beneficial ways. 
-
-<span class="italic font-semibold text-blue-900">
-    Political philosophy</span> shows us how to organize ourselves.
-<span class="italic font-semibold text-blue-900">Ethics</span> guides us in how we ought to treat one another.
-<span class="italic font-semibold text-blue-900">Metaphysics</span> teaches us to question the universe.
-<span class="italic font-semibold text-blue-900">Existentialism</span> brings us to question our place in it.
-
-Beyond that, thinking like a philosopher trains you to be a problem-solver, a persuasive orator, and a critical thinker. 
-
-Dialexicon is the first step on that journey, beginning with youth.
-        </p>
-    </div>
-
-    <div class="mt-10 mb-10">
-    <span class="text-blue-900 text-4xl">Why was Dialexicon created?</span>
-    <div>
-    <p class="text-xl whitespace-pre-wrap">
-<span class="italic whitespace-pre-wrap">
-    Here are some reasons why Dialexicon came into existence:
-</span>   
-<p class="ml-2">
-1. To fill the chasm of philosophy opportunities and resources for high school students.
-2. To share the voices and philosophical opinions of youth with a global audience.
-3. To provide a forum for youth to discuss philosophy with other engaged youth.
-4. To distill complex philosophical ideas to be approachable for youth.
-</p>
-Dialexicon seeks to close a gap in access to philosophy opportunities and resources for youth,
-offering a platform tailored to middle and high school students who love philosophy.
-
-If you're a new visitor, welcome to Dialexicon.
-
-    </p>
-    </div>
-    </div>
-</div>
 
 </Layout>
 </div>
