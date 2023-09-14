@@ -76,11 +76,11 @@ export const footerData = {
   //   { text: 'Privacy Policy', href: getPermalink('/privacy') },
   // ],
   socialLinks: [
-    // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    // { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Youtube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@dialexicon' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/dialexiconorg/' },
+    { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/dialexiconorg' },
+    { ariaLabel: 'Spotify', icon: 'tabler:brand-spotify', href: 'https://open.spotify.com/show/6ab9iObuaUb0VDo4R9lLH4' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/elizabethzhu1/dialexicon' },
   ],
   footNote: `
     &copy; Dialexicon 2023. Powered by Astro.
