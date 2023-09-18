@@ -15,7 +15,7 @@ const metadata = {
     <div style="font-family:'Times New Roman', Times, serif">
 
     <div style=
-    `background-image: url(./src/images/submit.jpg);
+    `background-image: url(/images/submit.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -33,25 +33,46 @@ const metadata = {
     <div class="text-white text-md absolute right-5 bottom-4" style="font-family:serif;">Saint Paul Writing His Epistles, by Valentin de Boulogne, 1618</div>
 
   </div>
+  
+
+  <div class="text-black text-xl mt-10 mx-auto" style="width:1000px">
+    <p class="text-black text-xl whitespace-pre-wrap">
+        <span class="text-blue-900 text-4xl">What is the <span class="italic">Dialexicon</span> Journal?
+        </span>
+<span class="italic">
+    Dialexicon</span> is a journal that publishes exceptional philosophical essays written by high school students around the world.
+
+We are looking for papers that are 1200 to 1500 words, and make a compelling, original philosophical argument.
+Every fall, we release prompts for students to write about, but we also accept papers on any relevant topic.
+Typically, we look for papers that approach current events through a philosophical lens, as reflected in our prompts.
+
+If your paper has been accepted for publication, we will contact you by email. Published authors will have their essays 
+published online, and are invited to participate in an interview with <span class="italic">Dialexicon</span> about their paper and interest in philosophy.
+
+The top paper will be awarded a $100 prize, and we typically publish 5 to 7 papers each year to <span class="italic">Dialexicon</span>.
+
+If you are interested in submitting, the upcoming Dialexicon Vol. 4 will be opening to submissions in Fall 2024!
+  </div>
+
     <Steps
         title="How do I submit my essay?"
         items={[
         {
             title: 'Step 1: <span class="font-medium">Read over the prompts.</span>',
             description:
-            "You can find the prompts on our website.",
+            'You can find the <a href="#prompts" class="text-blue-800 font-semibold underline">prompts</a> on our website.',
             icon: 'tabler:package',
         },
         {
             title: 'Step 2: <span class="font-medium">Write a 1200 - 1500 word philosophical essay on one of our prompts (or pick your own!).</em>',
             description:
-            "Visit our guidelines + see past papers for exemplars.",
+            'Read our <a href="#guidelines" class="text-blue-800 font-semibold underline">guidelines</a> and see past papers for exemplars.',
             icon: 'tabler:letter-case',
         },
         {
             title: 'Step 3: <span class="font-medium">Email your paper to us.</span>',
             description:
-            'Email your paper to dialexiconjournal@gmail.com, with the subject "Dialexicon Submission" and attach the submission form!',
+            'Email your paper to <a href="mailto:dialexiconjournal@gmail.com" class="text-blue-800 font-bold underline">dialexiconjournal@gmail.com</a>, with the subject "Dialexicon Submission" and attach this <a href="/resources/submissionform.pdf" class="text-blue-800 font-bold underline">form</a>.',
             icon: 'tabler:paint',
         },
         {
@@ -60,10 +81,24 @@ const metadata = {
         },
         ]}
         image={{
-        src: './src/images/the-philosophers-master-of-the-judgment-of-solomon.jpg',
+        src: '/images/the-philosophers-master-of-the-judgment-of-solomon.jpg',
         alt: 'Steps image',
         }}
     />
+
+    <div id="guidelines" class="mx-auto" style="width:1000px">
+       <h1 class="text-blue-900 text-4xl"> Guidelines for Submitting to <span class="italic">Dialexicon</span></h1>
+       <p class="mt-5 text-xl"> Please read over the following two documents before submitting your paper to the journal.</p>
+       <div class="flex flex-col gap-2 text-xl mt-5">
+        <a href="/resources/dialexicon_essay_guide.pdf" class="text-blue-800 underline underline-offset-2"> 1. Dialexicon's Guide to Writing a Philosophy Essay</a>
+        <a href="/resources/dialexicon_rubric.pdf" class="text-blue-800 underline underline-offset-2"> 2. Dialexicon's Rubric for Adjudicating Papers </a>
+       </div>
+    </div>
+
+    <div id="prompts" class="mx-auto mt-14" style="width:1000px">
+        <h1 class="text-blue-900 text-4xl"> Prompts for <span class="italic">Dialexicon</span> Vol. 4</h1>
+        <p class="mt-5 text-xl"> The prompts for the upcoming volume of Dialexicon have not been released yet! Keep your eyes peeled for updates!</p>
+     </div>
 
     <FAQs
         title="Frequently Asked Questions"
