@@ -56,6 +56,7 @@ export interface MetaData {
 
   openGraph?: MetaDataOpenGraph;
   twitter?: MetaDataTwitter;
+  noFooter?: boolean;
 }
 
 export interface MetaDataRobots {

@@ -9,116 +9,115 @@ const metadata = {
 <body class="light-theme" style="background-color:#F9F6EE; overflow-x:hidden;">
 <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
-
 <Layout metadata={metadata}>
 <div style="font-family:'Times New Roman', Times, serif;">
   <div style="height:100%">
     <div class="mt-20 ml-16 flex flex-row items-end gap-7">
         <!-- <span class="text-blue-900 font-bold text-9xl italic hover:not-italic" style="font-family:serif;"> Dialexicon </span> -->
-        <h1 class="m17 text-blue-900 font-bold text-9xl italic hover:not-italic" style="font-family:serif;">
+        <h1 class="m17 text-blue-800 font-bold text-9xl italic hover:not-italic" style="font-family:serif;">
             <span class="letters">Dialexicon</span>
         </h1>
-        <span class="text-blue-900 text-2xl mb-4" style="font-family:serif;"> Bringing philosophy to youth. </span>
+        <span class="text-blue-800 text-2xl mb-4" style="font-family:serif;"> Bringing philosophy to youth. </span>
     </div>
 
     <span class="text-blue-900 text-lg ml-16" style="font-family:serif;"> <span class="text-purple-700 font-bold">dialexicon </span> = <span class="text-blue-700 font-semibold">dialectic ('reasoning through opposition') </span> + <span class="text-red-700 font-semibold">lexicon ('vocabulary')</span></span>
 
     <div class="flex flex-row gap-4 absolute right-14 top-10 font-regular text-black">
       <a href="/" class="text-xl italic" style="font-family:serif">Home </a>
-        <a href="./about" class="text-xl" style="font-family:serif">About </a>
+        <a href="./about" class="text-xl hover:italic" style="font-family:serif">About </a>
         <a href="./journal" class="text-xl hover:italic" style="font-family:serif"> Journal </a>
         <a href="./submit" class="text-xl hover:italic" style="font-family:serif"> Submit </a>
     </div>
     
-    <div class="px-8 2xl:max-w-7xl mx-auto py-7 ml-7 mr-7">
-    <div class="space-y-1 mt-1">
+    <div class="px-8 2xl:max-w-8xl mx-auto py-7 ml-6 mr-6">
+    <div class="space-y-1 mt-1 ml-2 mr-2">
       <div
-        class="h-0.5 bg-blue-800"
+        class="h-0.5 bg-blue-700"
         data-aos="fade-up"
         data-aos-duration="1000">
       </div>
     </div>
     <ul
-      class="mx-auto grid grid-cols-1 sm:grid-cols-2 text-blue-900 md:grid-cols-3 lg:grid-cols-4 items-start gap-6 mt-4"
+      class="mx-auto grid grid-cols-1 text-blue-900 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 items-start gap-6 mt-4"
       role="list">
-      <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="1500">
-        <a href="./journal">
-          <div class="h-full flex flex-col justify-between hover:text-blue-700 hover:border-4 rounded-3xl p-4 hover:border-blue-700">
+      <li class="flow-root" data-aos="fade-up" data-aos-duration="1500">
+        <a href="./journal" target="_blank">
+          <div class="h-full flex flex-col justify-between hover:text-blue-700 border-4 border-transparent hover:border-4 rounded-3xl p-3 xl:p-4 3xl:p-8 hover:border-blue-700">
             <div>
-              <img src="/images/DP-13139-001-1.jpg" alt="Death of Socrates" class="mt-5 opacity-100 hover:opacity-70 rounded-3xl object-cover object-top overflow-hidden h-52 w-48 xl:h-72 xl:w-72 mb-5 ">
-              <div class="ml-1">
+              <img src="/images/DP-13139-001-1.jpg" alt="Death of Socrates" class="mt-4 opacity-100 hover:opacity-70 rounded-3xl object-cover object-center overflow-hidden h-60 w-60 lg:h-72 lg:w-72 2xl:h-96 2xl:w-96 mb-5">
+              <div class="ml-2 mr-2">
               <p class="italic font-semibold shrink-0">JOURNAL</p>
-              <p class="text-md mt-3 leading-relaxed w-72">
+              <p class="text-md mt-3 leading-relaxed 2xl:text-xl">
                 Our annual journal publishes philosophical writing from high school students.
               </p>
               </div>
             </div>
             <div>
-              <p class="ml-1 mt-3 text-md font-semibold">
-                read our journal
+              <p class="ml-2 mt-3 text-md font-semibold">
+                read our journal &rarr;
               </p>
             </div>
           </div>
         </a>
       </li>
       <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2000">
-        <a href="https://open.spotify.com/show/6ab9iObuaUb0VDo4R9lLH4">
-          <div class="h-full flex flex-col justify-between hover:text-blue-700 hover:border-4 rounded-3xl p-4 hover:border-blue-700">
+        <a href="https://www.youtube.com/@dialexicon" target="_blank">
+          <div class="h-full flex flex-col justify-between hover:text-blue-700 border-4 border-transparent hover:border-4 rounded-3xl p-3 xl:p-4 3xl:p-8 hover:border-blue-700">
             <div>
-              <img src="/images/the-philosophers-master-of-the-judgment-of-solomon.jpg" alt="Judgement of Solomon" class="mt-5 opacity-100 hover:opacity-70 rounded-3xl object-cover object-center overflow-hidden h-52 w-48 xl:h-72 xl:w-72 mb-5 ">
-              <div class="ml-1">
+              <img src="/images/the-philosophers-master-of-the-judgment-of-solomon.jpg" alt="Judgement of Solomon" class="mt-4 opacity-100 hover:opacity-70 rounded-3xl object-cover object-center overflow-hidden h-60 w-60 lg:h-72 lg:w-72 2xl:h-96 2xl:w-96 mb-5 ">
+              <div class="ml-2">
               <p class="italic font-semibold shrink-0">PODCAST</p>
-              <p class="text-md mt-3 leading-relaxed">
+              <p class="text-md mt-3 leading-relaxed 2xl:text-xl">
                 We interview philosophers of all backgrounds
                 and our published authors.
               </p>
               </div>
             </div>
             <div>
-              <p class="ml-1 mt-3 text-md font-semibold">
-                listen to our podcast
+              <p class="ml-2 mt-3 text-md font-semibold">
+                listen to our interviews &rarr;
               </p>
             </div>
           </div>
         </a>
       </li>
       <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2500">
-        <a href="https://discord.com/invite/J5RzXgQRWK">
-          <div class="h-full flex flex-col justify-between hover:text-blue-700 hover:border-4 rounded-xl p-4 hover:border-blue-700">
+        <a href="https://discord.com/invite/J5RzXgQRWK" target="_blank">
+          <div class="h-full flex flex-col justify-between hover:text-blue-700 border-4 border-transparent hover:border-4 rounded-xl p-3 xl:p-4 3xl:p-8 hover:border-blue-700">
             <div>
-              <img src="/images/aristotle-and-plato-school-of-athens-raphael.jpg" alt="School of Athens" class="mt-5 opacity-100 hover:opacity-70 rounded-3xl object-cover object-top overflow-hidden h-52 w-48 xl:h-72 xl:w-72 mb-5 ">
-              <div class="ml-1">
+              <img src="/images/aristotle-and-plato-school-of-athens-raphael.jpg" alt="School of Athens" class="mt-4 opacity-100 hover:opacity-70 rounded-3xl object-cover object-top overflow-hidden h-60 w-60 lg:h-72 lg:w-72 2xl:h-96 2xl:w-96 mb-5">
+              <div class="ml-2">
               <p class="italic font-semibold shrink-0">COMMUNITY</p>
-              <p class="text-md mt-3 leading-relaxed">
-                Chat philosophy with other youth on our Discord,
-                and ask journal-related questions.
+              <p class="text-md mt-3 leading-relaxed 2xl:text-xl">
+                Discuss philosophy with other youth on our Discord server,
+                and ask questions.
               </p>
               </div>
             </div>
             <div>
-              <p class="ml-1 mt-3 text-md font-semibold">
-                join the discord
+              <p class="ml-2 mt-3 text-md font-semibold">
+                join the discord &rarr;
               </p>
             </div>
           </div>
         </a>
       </li>
       <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="3000">
-        <a href="./resources">
-          <div class="h-full flex flex-col justify-between hover:text-blue-700 hover:border-4 rounded-xl p-4 hover:border-blue-700">
+        <a href="./resources" target="_blank">
+          <div class="h-full flex flex-col justify-between hover:text-blue-700 border-4 border-transparent hover:border-4 rounded-xl p-3 xl:p-4 3xl:p-8 hover:border-blue-700">
             <div>
-              <img src="/images/reading.jpg" alt="Girl Reading" class="mt-5 opacity-100 hover:opacity-70 rounded-3xl object-cover object-center overflow-hidden h-52 w-48 xl:h-72 xl:w-72 mb-5 ">
-              <div class="ml-1">
+              <img src="/images/reading.jpg" alt="Girl Reading" class="mt-4 opacity-100 hover:opacity-70 rounded-3xl object-cover object-center overflow-hidden h-60 w-60 lg:h-72 lg:w-72 2xl:h-96 2xl:w-96 mb-5 ">
+              <div class="ml-2">
               <p class="italic font-semibold shrink-0">RESOURCES</p>
               <p class="text-md mt-3 leading-relaxed">
                A collection of accessible philosophy resources,
-               curated for high school students.
+               curated for youth.
               </p>
               </div>
             </div>
             <div>
-              <p class="ml-1 mt-3 text-md font-semibold">
-                read the resources
+              <p class="ml-2 mt-3 text-md font-semibold 2xl:text-xl">
+                read the resources &rarr;
               </p>
             </div>
           </div>
@@ -127,7 +126,7 @@ const metadata = {
     </ul>
     </div>
 
-    <div class="text-container text-4xl mt-2 text-blue-800">
+    <div class="text-container text-4xl mt-1 text-blue-800">
       <div id="text" class="text-part"> dialexicon vol 3 </div>
       <div id="text" class="text-part"> dialexicon vol 3 </div>
       <div id="text" class="text-part"> dialexicon vol 3 </div>
@@ -141,7 +140,7 @@ const metadata = {
 
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
-      // eslint-disable-next-line
+      /* eslint-disable */
         gsap.to('.text-part', {
           xPercent: -100,
           repeat: -1,
