@@ -15,8 +15,6 @@ import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
 import { ANALYTICS, SITE } from './src/utils/config.ts';
 
-import vercel from '@astrojs/vercel/serverless';
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const whenExternalScripts = (items = []) =>
@@ -31,8 +29,7 @@ export default defineConfig({
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
-  output: 'server',
-  adapter: vercel(),
+  output: 'static',
 
   integrations: [
     tailwind({
