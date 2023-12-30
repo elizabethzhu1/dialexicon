@@ -29,7 +29,7 @@
     "node-addon-api": "^7.0.0",
     "node-gyp": "^10.0.1",
     "nvm": "^0.0.4",
-    "sharp": "^0.33.1",
+    "sharp": "^0.32.6",
     "unpic": "^3.10.0"
   },
   "devDependencies": {
