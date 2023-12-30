@@ -19,7 +19,7 @@
     "@astrolib/analytics": "^0.4.2",
     "@astrolib/seo": "^1.0.0-beta.4",
     "@fontsource-variable/inter": "^5.0.8",
-    "@img/sharp-darwin-arm64": "^0.33.1",
+    "@img/sharp-linux-x64": "^0.33.1",
     "animejs": "^3.2.1",
     "aos": "^2.3.4",
     "astro": "^3.0.7",
