@@ -19,13 +19,17 @@
     "@astrolib/analytics": "^0.4.2",
     "@astrolib/seo": "^1.0.0-beta.4",
     "@fontsource-variable/inter": "^5.0.8",
+    "@img/sharp-darwin-arm64": "^0.33.1",
     "animejs": "^3.2.1",
     "aos": "^2.3.4",
     "astro": "^3.0.7",
     "astro-icon": "^1.0.0-next.2",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
-    "sharp": "^0.32.6",
+    "node-addon-api": "^7.0.0",
+    "node-gyp": "^10.0.1",
+    "nvm": "^0.0.4",
+    "sharp": "^0.33.1",
     "unpic": "^3.10.0"
   },
   "devDependencies": {
