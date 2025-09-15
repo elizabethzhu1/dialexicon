@@ -124,9 +124,9 @@ const metadata = {
     </ul>
     </div>
 
-    <div class="space-y-1 mt-1 ml-2 mr-2 mb-1">
+    <div class="space-y-1 mt-2 ml-2 mr-2 mb-1">
       <div
-        class="h-0.5 bg-blue-700"
+        class="h-0.5 bg-blue-500"
         data-aos="fade-up"
         data-aos-duration="1000">
       </div>
@@ -146,15 +146,17 @@ const metadata = {
 
     <div class="space-y-1 mt-1 ml-2 mr-2">
       <div
-        class="h-0.5 bg-blue-700"
+        class="h-0.5 bg-blue-500"
         data-aos="fade-up"
         data-aos-duration="1000">
       </div>
     </div>
 
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
+    <script is:inline>
       /* eslint-disable */
+      /* @ts-ignore */
+      // @ts-nocheck
         gsap.to('.text-part', {
           xPercent: -100,
           repeat: -1,
